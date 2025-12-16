@@ -34,8 +34,9 @@ const BITACORA_ESTATICA: BitacoraEntity[] = [
     accion: 'Inicio de sesión exitoso',
     ipv4: '192.168.1.100',
     nivel: 'INFO',
-    created_at: new Date(Date.now() - 1000 * 60 * 30).toISOString(),
-    updated_at: new Date(Date.now() - 1000 * 60 * 30).toISOString()
+    created_at: new Date(Date.now() - 1000 * 60 * 30),
+    updated_at: new Date(Date.now() - 1000 * 60 * 30),
+    deleted_at: null
   },
   {
     id: 2,
@@ -43,8 +44,9 @@ const BITACORA_ESTATICA: BitacoraEntity[] = [
     accion: 'Creación de producto: Laptop Dell XPS 13',
     ipv4: '192.168.1.105',
     nivel: 'SUCCESS',
-    created_at: new Date(Date.now() - 1000 * 60 * 60).toISOString(),
-    updated_at: new Date(Date.now() - 1000 * 60 * 60).toISOString()
+    created_at: new Date(Date.now() - 1000 * 60 * 60),
+    updated_at: new Date(Date.now() - 1000 * 60 * 60),
+    deleted_at: null
   },
   {
     id: 3,
@@ -52,8 +54,9 @@ const BITACORA_ESTATICA: BitacoraEntity[] = [
     accion: 'Intento de acceso no autorizado',
     ipv4: '192.168.1.200',
     nivel: 'WARNING',
-    created_at: new Date(Date.now() - 1000 * 60 * 90).toISOString(),
-    updated_at: new Date(Date.now() - 1000 * 60 * 90).toISOString()
+    created_at: new Date(Date.now() - 1000 * 60 * 90),
+    updated_at: new Date(Date.now() - 1000 * 60 * 90),
+    deleted_at: null
   },
   {
     id: 4,
@@ -61,8 +64,9 @@ const BITACORA_ESTATICA: BitacoraEntity[] = [
     accion: 'Error al procesar pago',
     ipv4: '192.168.1.150',
     nivel: 'ERROR',
-    created_at: new Date(Date.now() - 1000 * 60 * 120).toISOString(),
-    updated_at: new Date(Date.now() - 1000 * 60 * 120).toISOString()
+    created_at: new Date(Date.now() - 1000 * 60 * 120),
+    updated_at: new Date(Date.now() - 1000 * 60 * 120),
+    deleted_at: null
   },
   {
     id: 5,
@@ -70,8 +74,9 @@ const BITACORA_ESTATICA: BitacoraEntity[] = [
     accion: 'Actualización de inventario completada',
     ipv4: '192.168.1.105',
     nivel: 'SUCCESS',
-    created_at: new Date(Date.now() - 1000 * 60 * 180).toISOString(),
-    updated_at: new Date(Date.now() - 1000 * 60 * 180).toISOString()
+    created_at: new Date(Date.now() - 1000 * 60 * 180),
+    updated_at: new Date(Date.now() - 1000 * 60 * 180),
+    deleted_at: null
   },
   {
     id: 6,
@@ -79,8 +84,9 @@ const BITACORA_ESTATICA: BitacoraEntity[] = [
     accion: 'Generación de reporte de ventas',
     ipv4: '192.168.1.100',
     nivel: 'INFO',
-    created_at: new Date(Date.now() - 1000 * 60 * 240).toISOString(),
-    updated_at: new Date(Date.now() - 1000 * 60 * 240).toISOString()
+    created_at: new Date(Date.now() - 1000 * 60 * 240),
+    updated_at: new Date(Date.now() - 1000 * 60 * 240),
+    deleted_at: null
   },
   {
     id: 7,
@@ -88,8 +94,9 @@ const BITACORA_ESTATICA: BitacoraEntity[] = [
     accion: 'Backup de base de datos iniciado',
     ipv4: '10.0.0.1',
     nivel: 'INFO',
-    created_at: new Date(Date.now() - 1000 * 60 * 300).toISOString(),
-    updated_at: new Date(Date.now() - 1000 * 60 * 300).toISOString()
+    created_at: new Date(Date.now() - 1000 * 60 * 300),
+    updated_at: new Date(Date.now() - 1000 * 60 * 300),
+    deleted_at: null
   },
   {
     id: 8,
@@ -97,8 +104,9 @@ const BITACORA_ESTATICA: BitacoraEntity[] = [
     accion: 'Eliminación de producto obsoleto',
     ipv4: '192.168.1.150',
     nivel: 'WARNING',
-    created_at: new Date(Date.now() - 1000 * 60 * 360).toISOString(),
-    updated_at: new Date(Date.now() - 1000 * 60 * 360).toISOString()
+    created_at: new Date(Date.now() - 1000 * 60 * 360),
+    updated_at: new Date(Date.now() - 1000 * 60 * 360),
+    deleted_at: null
   }
 ];
 

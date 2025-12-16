@@ -15,7 +15,7 @@ export async function fetchGeminiVisionJSON({ dataUrl, prompt, model }: FetchGem
 	if (!apiKey) throw new Error("Falta VITE_GEMINI_API_KEY");
 
 	// Tipado laxo para evitar fricciones con cambios de SDK
-	const ai: any = new GoogleGenAI(apiKey);
+	const ai: any = new GoogleGenAI({apiKey});
 
 	// Extraer base64 y mimeType del dataUrl
 	const match = dataUrl.match(/^data:(.*?);base64,(.+)$/);
