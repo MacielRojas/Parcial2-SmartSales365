@@ -1,0 +1,1361 @@
+[
+  {
+    "id": null,
+    "nombre": "iPhone 15 Pro",
+    "precio": 1299,
+    "stock": 250,
+    "codigo": "prod-00199",
+    "marca": "Apple",
+    "categoria": 2
+  },
+  {
+    "id": null,
+    "nombre": "Samsung Galaxy S24",
+    "precio": 1099,
+    "stock": 500,
+    "codigo": "prod-00299",
+    "marca": "Samsung",
+    "categoria": 2
+  },
+  {
+    "id": null,
+    "nombre": "Xiaomi 14 Pro",
+    "precio": 899,
+    "stock": 800,
+    "codigo": "prod-00399",
+    "marca": "Xiaomi",
+    "categoria": 2
+  },
+  {
+    "id": null,
+    "nombre": "Google Pixel 9",
+    "precio": 999,
+    "stock": 300,
+    "codigo": "prod-00499",
+    "marca": "Google",
+    "categoria": 2
+  },
+  {
+    "id": null,
+    "nombre": "OnePlus 12",
+    "precio": 849,
+    "stock": 600,
+    "codigo": "prod-00599",
+    "marca": "OnePlus",
+    "categoria": 2
+  },
+
+  {
+    "id": null,
+    "nombre": "iPad Pro 13” M3",
+    "precio": 1199,
+    "stock": 400,
+    "codigo": "prod-00699",
+    "marca": "Apple",
+    "categoria": 3
+  },
+  {
+    "id": null,
+    "nombre": "Samsung Galaxy Tab S9",
+    "precio": 899,
+    "stock": 450,
+    "codigo": "prod-00700",
+    "marca": "Samsung",
+    "categoria": 3
+  },
+  {
+    "id": null,
+    "nombre": "Xiaomi Pad 6 Pro",
+    "precio": 499,
+    "stock": 700,
+    "codigo": "prod-00896",
+    "marca": "Xiaomi",
+    "categoria": 3
+  },
+  {
+    "id": null,
+    "nombre": "Lenovo Tab P12",
+    "precio": 399,
+    "stock": 600,
+    "codigo": "prod-00965",
+    "marca": "Lenovo",
+    "categoria": 3
+  },
+  {
+    "id": null,
+    "nombre": "Huawei MatePad Pro",
+    "precio": 799,
+    "stock": 500,
+    "codigo": "prod-010876",
+    "marca": "Huawei",
+    "categoria": 3
+  },
+
+  {
+    "id": null,
+    "nombre": "MacBook Air M3",
+    "precio": 1499,
+    "stock": 300,
+    "codigo": "prod-011856",
+    "marca": "Apple",
+    "categoria": 4
+  },
+  {
+    "id": null,
+    "nombre": "Dell XPS 15",
+    "precio": 1699,
+    "stock": 250,
+    "codigo": "prod-012876",
+    "marca": "Dell",
+    "categoria": 4
+  },
+  {
+    "id": null,
+    "nombre": "HP Spectre x360",
+    "precio": 1399,
+    "stock": 350,
+    "codigo": "prod-013",
+    "marca": "HP",
+    "categoria": 4
+  },
+  {
+    "id": null,
+    "nombre": "Lenovo ThinkPad X1 Carbon",
+    "precio": 1799,
+    "stock": 200,
+    "codigo": "prod-014",
+    "marca": "Lenovo",
+    "categoria": 4
+  },
+  {
+    "id": null,
+    "nombre": "Asus ZenBook 14 OLED",
+    "precio": 1299,
+    "stock": 400,
+    "codigo": "prod-015",
+    "marca": "Asus",
+    "categoria": 4
+  },
+
+  {
+    "id": null,
+    "nombre": "Sony WH-1000XM5",
+    "precio": 399,
+    "stock": 1000,
+    "codigo": "prod-016",
+    "marca": "Sony",
+    "categoria": 5
+  },
+  {
+    "id": null,
+    "nombre": "Apple AirPods Pro 2",
+    "precio": 249,
+    "stock": 1200,
+    "codigo": "prod-017",
+    "marca": "Apple",
+    "categoria": 5
+  },
+  {
+    "id": null,
+    "nombre": "Bose QuietComfort Ultra",
+    "precio": 349,
+    "stock": 900,
+    "codigo": "prod-018",
+    "marca": "Bose",
+    "categoria": 5
+  },
+  {
+    "id": null,
+    "nombre": "JBL Tune 710BT",
+    "precio": 99,
+    "stock": 1500,
+    "codigo": "prod-019",
+    "marca": "JBL",
+    "categoria": 5
+  },
+  {
+    "id": null,
+    "nombre": "Beats Studio Pro",
+    "precio": 349,
+    "stock": 800,
+    "codigo": "prod-020",
+    "marca": "Beats",
+    "categoria": 5
+  },
+
+  {
+    "id": null,
+    "nombre": "Apple Watch Series 9",
+    "precio": 399,
+    "stock": 700,
+    "codigo": "prod-021",
+    "marca": "Apple",
+    "categoria": 6
+  },
+  {
+    "id": null,
+    "nombre": "Samsung Galaxy Watch 6",
+    "precio": 329,
+    "stock": 800,
+    "codigo": "prod-022",
+    "marca": "Samsung",
+    "categoria": 6
+  },
+  {
+    "id": null,
+    "nombre": "Xiaomi Watch S3",
+    "precio": 199,
+    "stock": 1200,
+    "codigo": "prod-023",
+    "marca": "Xiaomi",
+    "categoria": 6
+  },
+  {
+    "id": null,
+    "nombre": "Fitbit Versa 4",
+    "precio": 229,
+    "stock": 1100,
+    "codigo": "prod-024",
+    "marca": "Fitbit",
+    "categoria": 6
+  },
+  {
+    "id": null,
+    "nombre": "Huawei Watch GT 4",
+    "precio": 249,
+    "stock": 950,
+    "codigo": "prod-025",
+    "marca": "Huawei",
+    "categoria": 6
+  },
+
+  {
+    "id": null,
+    "nombre": "LG UltraGear 27” QHD",
+    "precio": 399,
+    "stock": 400,
+    "codigo": "prod-026",
+    "marca": "LG",
+    "categoria": 7
+  },
+  {
+    "id": null,
+    "nombre": "Samsung Odyssey G7",
+    "precio": 599,
+    "stock": 350,
+    "codigo": "prod-027",
+    "marca": "Samsung",
+    "categoria": 7
+  },
+  {
+    "id": null,
+    "nombre": "Dell Ultrasharp 32” 4K",
+    "precio": 699,
+    "stock": 300,
+    "codigo": "prod-028",
+    "marca": "Dell",
+    "categoria": 7
+  },
+  {
+    "id": null,
+    "nombre": "ASUS ProArt 27”",
+    "precio": 549,
+    "stock": 250,
+    "codigo": "prod-029",
+    "marca": "Asus",
+    "categoria": 7
+  },
+  {
+    "id": null,
+    "nombre": "BenQ MOBIUZ EX270M",
+    "precio": 329,
+    "stock": 500,
+    "codigo": "prod-030",
+    "marca": "BenQ",
+    "categoria": 7
+  },
+
+  {
+    "id": null,
+    "nombre": "Canon EOS R8",
+    "precio": 1499,
+    "stock": 150,
+    "codigo": "prod-031",
+    "marca": "Canon",
+    "categoria": 8
+  },
+  {
+    "id": null,
+    "nombre": "Sony Alpha A7 IV",
+    "precio": 2499,
+    "stock": 120,
+    "codigo": "prod-032",
+    "marca": "Sony",
+    "categoria": 8
+  },
+  {
+    "id": null,
+    "nombre": "Nikon Z6 II",
+    "precio": 1999,
+    "stock": 100,
+    "codigo": "prod-033",
+    "marca": "Nikon",
+    "categoria": 8
+  },
+  {
+    "id": null,
+    "nombre": "Fujifilm X-T5",
+    "precio": 1799,
+    "stock": 150,
+    "codigo": "prod-034",
+    "marca": "Fujifilm",
+    "categoria": 8
+  },
+  {
+    "id": null,
+    "nombre": "Panasonic Lumix G9 II",
+    "precio": 1699,
+    "stock": 130,
+    "codigo": "prod-035",
+    "marca": "Panasonic",
+    "categoria": 8
+  },
+
+  {
+    "id": null,
+    "nombre": "PlayStation 5",
+    "precio": 499,
+    "stock": 600,
+    "codigo": "prod-036",
+    "marca": "Sony",
+    "categoria": 9
+  },
+  {
+    "id": null,
+    "nombre": "Xbox Series X",
+    "precio": 499,
+    "stock": 500,
+    "codigo": "prod-037",
+    "marca": "Microsoft",
+    "categoria": 9
+  },
+  {
+    "id": null,
+    "nombre": "Nintendo Switch OLED",
+    "precio": 349,
+    "stock": 800,
+    "codigo": "prod-038",
+    "marca": "Nintendo",
+    "categoria": 9
+  },
+  {
+    "id": null,
+    "nombre": "PlayStation 5 Digital Edition",
+    "precio": 449,
+    "stock": 400,
+    "codigo": "prod-039",
+    "marca": "Sony",
+    "categoria": 9
+  },
+  {
+    "id": null,
+    "nombre": "Xbox Series S",
+    "precio": 299,
+    "stock": 700,
+    "codigo": "prod-040",
+    "marca": "Microsoft",
+    "categoria": 9
+  },
+
+  {
+    "id": null,
+    "nombre": "Logitech MX Master 3S",
+    "precio": 129,
+    "stock": 900,
+    "codigo": "prod-041",
+    "marca": "Logitech",
+    "categoria": 10
+  },
+  {
+    "id": null,
+    "nombre": "Razer BlackWidow V4",
+    "precio": 199,
+    "stock": 600,
+    "codigo": "prod-042",
+    "marca": "Razer",
+    "categoria": 10
+  },
+  {
+    "id": null,
+    "nombre": "Corsair K70 RGB Pro",
+    "precio": 179,
+    "stock": 700,
+    "codigo": "prod-043",
+    "marca": "Corsair",
+    "categoria": 10
+  },
+  {
+    "id": null,
+    "nombre": "SteelSeries Rival 5",
+    "precio": 79,
+    "stock": 1000,
+    "codigo": "prod-044",
+    "marca": "SteelSeries",
+    "categoria": 10
+  },
+  {
+    "id": null,
+    "nombre": "Cooler Master Notepal X150R",
+    "precio": 69,
+    "stock": 850,
+    "codigo": "prod-045",
+    "marca": "Cooler Master",
+    "categoria": 10
+  },
+
+  {
+    "id": null,
+    "nombre": "TP-Link Archer AX6000",
+    "precio": 299,
+    "stock": 400,
+    "codigo": "prod-046",
+    "marca": "TP-Link",
+    "categoria": 11
+  },
+  {
+    "id": null,
+    "nombre": "Netgear Nighthawk RAXE500",
+    "precio": 499,
+    "stock": 350,
+    "codigo": "prod-047",
+    "marca": "Netgear",
+    "categoria": 11
+  },
+  {
+    "id": null,
+    "nombre": "Asus RT-AX88U",
+    "precio": 349,
+    "stock": 500,
+    "codigo": "prod-048",
+    "marca": "Asus",
+    "categoria": 11
+  },
+  {
+    "id": null,
+    "nombre": "Google Nest WiFi Pro",
+    "precio": 199,
+    "stock": 700,
+    "codigo": "prod-049",
+    "marca": "Google",
+    "categoria": 11
+  },
+  {
+    "id": null,
+    "nombre": "Linksys Velop MX4200",
+    "precio": 399,
+    "stock": 300,
+    "codigo": "prod-050",
+    "marca": "Linksys",
+    "categoria": 11
+  },
+  {
+      "id": null,
+      "nombre": "Samsung Galaxy S24 Ultra",
+      "precio": 1299,
+      "stock": 45,
+      "codigo": "prod-001",
+      "marca": "Samsung",
+      "categoria": 1
+    },
+    {
+      "id": null,
+      "nombre": "iPhone 15 Pro Max",
+      "precio": 1399,
+      "stock": 38,
+      "codigo": "prod-002",
+      "marca": "Apple",
+      "categoria": 1
+    },
+    {
+      "id": null,
+      "nombre": "Xiaomi Redmi Note 13",
+      "precio": 299,
+      "stock": 120,
+      "codigo": "prod-003",
+      "marca": "Xiaomi",
+      "categoria": 1
+    },
+    {
+      "id": null,
+      "nombre": "Google Pixel 8 Pro",
+      "precio": 999,
+      "stock": 55,
+      "codigo": "prod-004",
+      "marca": "Google",
+      "categoria": 1
+    },
+    {
+      "id": null,
+      "nombre": "OnePlus 12",
+      "precio": 899,
+      "stock": 67,
+      "codigo": "prod-005",
+      "marca": "OnePlus",
+      "categoria": 1
+    },
+    {
+      "id": null,
+      "nombre": "Motorola Edge 40 Pro",
+      "precio": 749,
+      "stock": 82,
+      "codigo": "prod-006",
+      "marca": "Motorola",
+      "categoria": 1
+    },
+    {
+      "id": null,
+      "nombre": "Oppo Find X6 Pro",
+      "precio": 1099,
+      "stock": 41,
+      "codigo": "prod-007",
+      "marca": "Oppo",
+      "categoria": 1
+    },
+    {
+      "id": null,
+      "nombre": "iPad Pro 12.9",
+      "precio": 1199,
+      "stock": 52,
+      "codigo": "prod-008",
+      "marca": "Apple",
+      "categoria": 2
+    },
+    {
+      "id": null,
+      "nombre": "Samsung Galaxy Tab S9",
+      "precio": 849,
+      "stock": 73,
+      "codigo": "prod-009",
+      "marca": "Samsung",
+      "categoria": 2
+    },
+    {
+      "id": null,
+      "nombre": "Lenovo Tab P12",
+      "precio": 599,
+      "stock": 95,
+      "codigo": "prod-010",
+      "marca": "Lenovo",
+      "categoria": 2
+    },
+    {
+      "id": null,
+      "nombre": "Huawei MatePad Pro",
+      "precio": 699,
+      "stock": 64,
+      "codigo": "prod-011",
+      "marca": "Huawei",
+      "categoria": 2
+    },
+    {
+      "id": null,
+      "nombre": "Microsoft Surface Pro 9",
+      "precio": 1299,
+      "stock": 48,
+      "codigo": "prod-012",
+      "marca": "Microsoft",
+      "categoria": 2
+    },
+    {
+      "id": null,
+      "nombre": "Amazon Fire HD 10",
+      "precio": 149,
+      "stock": 180,
+      "codigo": "prod-013",
+      "marca": "Amazon",
+      "categoria": 2
+    },
+    {
+      "id": null,
+      "nombre": "Xiaomi Pad 6",
+      "precio": 399,
+      "stock": 110,
+      "codigo": "prod-014",
+      "marca": "Xiaomi",
+      "categoria": 2
+    },
+    {
+      "id": null,
+      "nombre": "MacBook Pro 16 M3",
+      "precio": 2499,
+      "stock": 32,
+      "codigo": "prod-015",
+      "marca": "Apple",
+      "categoria": 3
+    },
+    {
+      "id": null,
+      "nombre": "Dell XPS 15",
+      "precio": 1899,
+      "stock": 45,
+      "codigo": "prod-016",
+      "marca": "Dell",
+      "categoria": 3
+    },
+    {
+      "id": null,
+      "nombre": "HP Spectre x360",
+      "precio": 1599,
+      "stock": 58,
+      "codigo": "prod-017",
+      "marca": "HP",
+      "categoria": 3
+    },
+    {
+      "id": null,
+      "nombre": "Lenovo ThinkPad X1 Carbon",
+      "precio": 1799,
+      "stock": 41,
+      "codigo": "prod-018",
+      "marca": "Lenovo",
+      "categoria": 3
+    },
+    {
+      "id": null,
+      "nombre": "ASUS ROG Zephyrus G14",
+      "precio": 1699,
+      "stock": 52,
+      "codigo": "prod-019",
+      "marca": "ASUS",
+      "categoria": 3
+    },
+    {
+      "id": null,
+      "nombre": "Acer Predator Helios 300",
+      "precio": 1399,
+      "stock": 66,
+      "codigo": "prod-020",
+      "marca": "Acer",
+      "categoria": 3
+    },
+    {
+      "id": null,
+      "nombre": "Microsoft Surface Laptop 5",
+      "precio": 1299,
+      "stock": 55,
+      "codigo": "prod-021",
+      "marca": "Microsoft",
+      "categoria": 3
+    },
+    {
+      "id": null,
+      "nombre": "Sony WH-1000XM5",
+      "precio": 399,
+      "stock": 125,
+      "codigo": "prod-022",
+      "marca": "Sony",
+      "categoria": 4
+    },
+    {
+      "id": null,
+      "nombre": "Apple AirPods Pro 2",
+      "precio": 249,
+      "stock": 210,
+      "codigo": "prod-023",
+      "marca": "Apple",
+      "categoria": 4
+    },
+    {
+      "id": null,
+      "nombre": "Bose QuietComfort 45",
+      "precio": 329,
+      "stock": 98,
+      "codigo": "prod-024",
+      "marca": "Bose",
+      "categoria": 4
+    },
+    {
+      "id": null,
+      "nombre": "JBL Tune 760NC",
+      "precio": 129,
+      "stock": 156,
+      "codigo": "prod-025",
+      "marca": "JBL",
+      "categoria": 4
+    },
+    {
+      "id": null,
+      "nombre": "Samsung Galaxy Buds2 Pro",
+      "precio": 229,
+      "stock": 142,
+      "codigo": "prod-026",
+      "marca": "Samsung",
+      "categoria": 4
+    },
+    {
+      "id": null,
+      "nombre": "Sennheiser Momentum 4",
+      "precio": 379,
+      "stock": 77,
+      "codigo": "prod-027",
+      "marca": "Sennheiser",
+      "categoria": 4
+    },
+    {
+      "id": null,
+      "nombre": "Beats Studio Pro",
+      "precio": 349,
+      "stock": 88,
+      "codigo": "prod-028",
+      "marca": "Beats",
+      "categoria": 4
+    },
+    {
+      "id": null,
+      "nombre": "Apple Watch Series 9",
+      "precio": 429,
+      "stock": 105,
+      "codigo": "prod-029",
+      "marca": "Apple",
+      "categoria": 5
+    },
+    {
+      "id": null,
+      "nombre": "Samsung Galaxy Watch 6",
+      "precio": 349,
+      "stock": 118,
+      "codigo": "prod-030",
+      "marca": "Samsung",
+      "categoria": 5
+    },
+    {
+      "id": null,
+      "nombre": "Garmin Forerunner 265",
+      "precio": 449,
+      "stock": 73,
+      "codigo": "prod-031",
+      "marca": "Garmin",
+      "categoria": 5
+    },
+    {
+      "id": null,
+      "nombre": "Fitbit Sense 2",
+      "precio": 299,
+      "stock": 95,
+      "codigo": "prod-032",
+      "marca": "Fitbit",
+      "categoria": 5
+    },
+    {
+      "id": null,
+      "nombre": "Amazfit GTR 4",
+      "precio": 199,
+      "stock": 134,
+      "codigo": "prod-033",
+      "marca": "Amazfit",
+      "categoria": 5
+    },
+    {
+      "id": null,
+      "nombre": "Huawei Watch GT 4",
+      "precio": 279,
+      "stock": 86,
+      "codigo": "prod-034",
+      "marca": "Huawei",
+      "categoria": 5
+    },
+    {
+      "id": null,
+      "nombre": "Xiaomi Watch S2",
+      "precio": 229,
+      "stock": 112,
+      "codigo": "prod-035",
+      "marca": "Xiaomi",
+      "categoria": 5
+    },
+    {
+      "id": null,
+      "nombre": "LG UltraGear 27 4K",
+      "precio": 699,
+      "stock": 54,
+      "codigo": "prod-036",
+      "marca": "LG",
+      "categoria": 6
+    },
+    {
+      "id": null,
+      "nombre": "Samsung Odyssey G7",
+      "precio": 799,
+      "stock": 48,
+      "codigo": "prod-037",
+      "marca": "Samsung",
+      "categoria": 6
+    },
+    {
+      "id": null,
+      "nombre": "Dell UltraSharp U2723DE",
+      "precio": 549,
+      "stock": 67,
+      "codigo": "prod-038",
+      "marca": "Dell",
+      "categoria": 6
+    },
+    {
+      "id": null,
+      "nombre": "ASUS ROG Swift PG279QM",
+      "precio": 899,
+      "stock": 41,
+      "codigo": "prod-039",
+      "marca": "ASUS",
+      "categoria": 6
+    },
+    {
+      "id": null,
+      "nombre": "BenQ MOBIUZ EX3210U",
+      "precio": 749,
+      "stock": 52,
+      "codigo": "prod-040",
+      "marca": "BenQ",
+      "categoria": 6
+    },
+    {
+      "id": null,
+      "nombre": "Acer Nitro XV272U",
+      "precio": 449,
+      "stock": 78,
+      "codigo": "prod-041",
+      "marca": "Acer",
+      "categoria": 6
+    },
+    {
+      "id": null,
+      "nombre": "ViewSonic Elite XG270QG",
+      "precio": 599,
+      "stock": 61,
+      "codigo": "prod-042",
+      "marca": "ViewSonic",
+      "categoria": 6
+    },
+    {
+      "id": null,
+      "nombre": "Canon EOS R6 Mark II",
+      "precio": 2499,
+      "stock": 28,
+      "codigo": "prod-043",
+      "marca": "Canon",
+      "categoria": 7
+    },
+    {
+      "id": null,
+      "nombre": "Sony Alpha A7 IV",
+      "precio": 2499,
+      "stock": 32,
+      "codigo": "prod-044",
+      "marca": "Sony",
+      "categoria": 7
+    },
+    {
+      "id": null,
+      "nombre": "Nikon Z8",
+      "precio": 3999,
+      "stock": 18,
+      "codigo": "prod-045",
+      "marca": "Nikon",
+      "categoria": 7
+    },
+    {
+      "id": null,
+      "nombre": "Fujifilm X-T5",
+      "precio": 1699,
+      "stock": 45,
+      "codigo": "prod-046",
+      "marca": "Fujifilm",
+      "categoria": 7
+    },
+    {
+      "id": null,
+      "nombre": "Panasonic Lumix S5 II",
+      "precio": 1999,
+      "stock": 37,
+      "codigo": "prod-047",
+      "marca": "Panasonic",
+      "categoria": 7
+    },
+    {
+      "id": null,
+      "nombre": "GoPro Hero 12 Black",
+      "precio": 399,
+      "stock": 92,
+      "codigo": "prod-048",
+      "marca": "GoPro",
+      "categoria": 7
+    },
+    {
+      "id": null,
+      "nombre": "DJI Osmo Action 4",
+      "precio": 379,
+      "stock": 85,
+      "codigo": "prod-049",
+      "marca": "DJI",
+      "categoria": 7
+    },
+    {
+      "id": null,
+      "nombre": "PlayStation 5",
+      "precio": 499,
+      "stock": 76,
+      "codigo": "prod-050",
+      "marca": "Sony",
+      "categoria": 8
+    },
+    {
+      "id": null,
+      "nombre": "Xbox Series X",
+      "precio": 499,
+      "stock": 68,
+      "codigo": "prod-051",
+      "marca": "Microsoft",
+      "categoria": 8
+    },
+    {
+      "id": null,
+      "nombre": "Nintendo Switch OLED",
+      "precio": 349,
+      "stock": 145,
+      "codigo": "prod-052",
+      "marca": "Nintendo",
+      "categoria": 8
+    },
+    {
+      "id": null,
+      "nombre": "Steam Deck 512GB",
+      "precio": 649,
+      "stock": 54,
+      "codigo": "prod-053",
+      "marca": "Valve",
+      "categoria": 8
+    },
+    {
+      "id": null,
+      "nombre": "ASUS ROG Ally",
+      "precio": 699,
+      "stock": 48,
+      "codigo": "prod-054",
+      "marca": "ASUS",
+      "categoria": 8
+    },
+    {
+      "id": null,
+      "nombre": "Logitech MX Master 3S",
+      "precio": 99,
+      "stock": 178,
+      "codigo": "prod-055",
+      "marca": "Logitech",
+      "categoria": 9
+    },
+    {
+      "id": null,
+      "nombre": "Razer BlackWidow V4 Pro",
+      "precio": 229,
+      "stock": 92,
+      "codigo": "prod-056",
+      "marca": "Razer",
+      "categoria": 9
+    },
+    {
+      "id": null,
+      "nombre": "Corsair K70 RGB",
+      "precio": 179,
+      "stock": 105,
+      "codigo": "prod-057",
+      "marca": "Corsair",
+      "categoria": 9
+    },
+    {
+      "id": null,
+      "nombre": "SteelSeries Arctis Nova Pro",
+      "precio": 349,
+      "stock": 67,
+      "codigo": "prod-058",
+      "marca": "SteelSeries",
+      "categoria": 9
+    },
+    {
+      "id": null,
+      "nombre": "HyperX Cloud III",
+      "precio": 129,
+      "stock": 134,
+      "codigo": "prod-059",
+      "marca": "HyperX",
+      "categoria": 9
+    },
+    {
+      "id": null,
+      "nombre": "Anker USB-C Hub 7 en 1",
+      "precio": 49,
+      "stock": 245,
+      "codigo": "prod-060",
+      "marca": "Anker",
+      "categoria": 9
+    },
+    {
+      "id": null,
+      "nombre": "Elgato Stream Deck",
+      "precio": 149,
+      "stock": 88,
+      "codigo": "prod-061",
+      "marca": "Elgato",
+      "categoria": 9
+    },
+    {
+      "id": null,
+      "nombre": "TP-Link Archer AX6000",
+      "precio": 299,
+      "stock": 73,
+      "codigo": "prod-062",
+      "marca": "TP-Link",
+      "categoria": 10
+    },
+    {
+      "id": null,
+      "nombre": "Netgear Nighthawk RAX50",
+      "precio": 249,
+      "stock": 86,
+      "codigo": "prod-063",
+      "marca": "Netgear",
+      "categoria": 10
+    },
+    {
+      "id": null,
+      "nombre": "ASUS RT-AX88U",
+      "precio": 349,
+      "stock": 61,
+      "codigo": "prod-064",
+      "marca": "ASUS",
+      "categoria": 10
+    },
+    {
+      "id": null,
+      "nombre": "Linksys Velop MX4200",
+      "precio": 399,
+      "stock": 52,
+      "codigo": "prod-065",
+      "marca": "Linksys",
+      "categoria": 10
+    },
+    {
+      "id": null,
+      "nombre": "Google Nest Wifi Pro",
+      "precio": 199,
+      "stock": 124,
+      "codigo": "prod-066",
+      "marca": "Google",
+      "categoria": 10
+    },
+    {
+      "id": null,
+      "nombre": "Ubiquiti Dream Machine",
+      "precio": 299,
+      "stock": 58,
+      "codigo": "prod-067",
+      "marca": "Ubiquiti",
+      "categoria": 10
+    },
+    {
+      "id": null,
+      "nombre": "D-Link DIR-X5460",
+      "precio": 179,
+      "stock": 95,
+      "codigo": "prod-068",
+      "marca": "D-Link",
+      "categoria": 10
+    },
+    {
+      "id": null,
+      "nombre": "Ninja Foodi Air Fryer",
+      "precio": 179,
+      "stock": 112,
+      "codigo": "prod-069",
+      "marca": "Ninja",
+      "categoria": 11
+    },
+    {
+      "id": null,
+      "nombre": "Instant Pot Duo Plus",
+      "precio": 129,
+      "stock": 148,
+      "codigo": "prod-070",
+      "marca": "Instant Pot",
+      "categoria": 11
+    },
+    {
+      "id": null,
+      "nombre": "Breville Barista Express",
+      "precio": 699,
+      "stock": 45,
+      "codigo": "prod-071",
+      "marca": "Breville",
+      "categoria": 11
+    },
+    {
+      "id": null,
+      "nombre": "KitchenAid Artisan 5Qt",
+      "precio": 449,
+      "stock": 67,
+      "codigo": "prod-072",
+      "marca": "KitchenAid",
+      "categoria": 11
+    },
+    {
+      "id": null,
+      "nombre": "Vitamix E310 Explorian",
+      "precio": 349,
+      "stock": 58,
+      "codigo": "prod-073",
+      "marca": "Vitamix",
+      "categoria": 11
+    },
+    {
+      "id": null,
+      "nombre": "Philips Digital Air Fryer",
+      "precio": 199,
+      "stock": 95,
+      "codigo": "prod-074",
+      "marca": "Philips",
+      "categoria": 11
+    },
+    {
+      "id": null,
+      "nombre": "Nespresso Vertuo Next",
+      "precio": 169,
+      "stock": 134,
+      "codigo": "prod-075",
+      "marca": "Nespresso",
+      "categoria": 11
+    },
+    {
+      "id": null,
+      "nombre": "Dyson V15 Detect",
+      "precio": 749,
+      "stock": 42,
+      "codigo": "prod-076",
+      "marca": "Dyson",
+      "categoria": 12
+    },
+    {
+      "id": null,
+      "nombre": "iRobot Roomba j7+",
+      "precio": 799,
+      "stock": 54,
+      "codigo": "prod-077",
+      "marca": "iRobot",
+      "categoria": 12
+    },
+    {
+      "id": null,
+      "nombre": "Shark Navigator Lift-Away",
+      "precio": 199,
+      "stock": 118,
+      "codigo": "prod-078",
+      "marca": "Shark",
+      "categoria": 12
+    },
+    {
+      "id": null,
+      "nombre": "Bissell CrossWave Pet Pro",
+      "precio": 329,
+      "stock": 76,
+      "codigo": "prod-079",
+      "marca": "Bissell",
+      "categoria": 12
+    },
+    {
+      "id": null,
+      "nombre": "Roborock S8 Pro Ultra",
+      "precio": 1599,
+      "stock": 31,
+      "codigo": "prod-080",
+      "marca": "Roborock",
+      "categoria": 12
+    },
+    {
+      "id": null,
+      "nombre": "Ecovacs Deebot X1 Omni",
+      "precio": 1499,
+      "stock": 28,
+      "codigo": "prod-081",
+      "marca": "Ecovacs",
+      "categoria": 12
+    },
+    {
+      "id": null,
+      "nombre": "LG WashTower 4.5 cu ft",
+      "precio": 2299,
+      "stock": 18,
+      "codigo": "prod-082",
+      "marca": "LG",
+      "categoria": 12
+    },
+    {
+      "id": null,
+      "nombre": "Daikin Split AC 18000 BTU",
+      "precio": 899,
+      "stock": 35,
+      "codigo": "prod-083",
+      "marca": "Daikin",
+      "categoria": 13
+    },
+    {
+      "id": null,
+      "nombre": "LG Dual Inverter AC",
+      "precio": 749,
+      "stock": 48,
+      "codigo": "prod-084",
+      "marca": "LG",
+      "categoria": 13
+    },
+    {
+      "id": null,
+      "nombre": "Samsung WindFree AC",
+      "precio": 1099,
+      "stock": 29,
+      "codigo": "prod-085",
+      "marca": "Samsung",
+      "categoria": 13
+    },
+    {
+      "id": null,
+      "nombre": "Dyson Pure Cool TP07",
+      "precio": 649,
+      "stock": 52,
+      "codigo": "prod-086",
+      "marca": "Dyson",
+      "categoria": 13
+    },
+    {
+      "id": null,
+      "nombre": "Honeywell TurboForce",
+      "precio": 49,
+      "stock": 215,
+      "codigo": "prod-087",
+      "marca": "Honeywell",
+      "categoria": 13
+    },
+    {
+      "id": null,
+      "nombre": "Vornado 630 Mid-Size",
+      "precio": 99,
+      "stock": 167,
+      "codigo": "prod-088",
+      "marca": "Vornado",
+      "categoria": 13
+    },
+    {
+      "id": null,
+      "nombre": "De'Longhi Oil Heater",
+      "precio": 179,
+      "stock": 88,
+      "codigo": "prod-089",
+      "marca": "De'Longhi",
+      "categoria": 13
+    },
+    {
+      "id": null,
+      "nombre": "Philips OneBlade Pro",
+      "precio": 89,
+      "stock": 198,
+      "codigo": "prod-090",
+      "marca": "Philips",
+      "categoria": 14
+    },
+    {
+      "id": null,
+      "nombre": "Braun Series 9 Pro",
+      "precio": 399,
+      "stock": 74,
+      "codigo": "prod-091",
+      "marca": "Braun",
+      "categoria": 14
+    },
+    {
+      "id": null,
+      "nombre": "Oral-B iO Series 9",
+      "precio": 299,
+      "stock": 92,
+      "codigo": "prod-092",
+      "marca": "Oral-B",
+      "categoria": 14
+    },
+    {
+      "id": null,
+      "nombre": "Dyson Supersonic",
+      "precio": 429,
+      "stock": 68,
+      "codigo": "prod-093",
+      "marca": "Dyson",
+      "categoria": 14
+    },
+    {
+      "id": null,
+      "nombre": "Revlon One-Step Dryer",
+      "precio": 59,
+      "stock": 245,
+      "codigo": "prod-094",
+      "marca": "Revlon",
+      "categoria": 14
+    },
+    {
+      "id": null,
+      "nombre": "Panasonic Nanoe Hair Dryer",
+      "precio": 149,
+      "stock": 128,
+      "codigo": "prod-095",
+      "marca": "Panasonic",
+      "categoria": 14
+    },
+    {
+      "id": null,
+      "nombre": "Waterpik Aquarius",
+      "precio": 79,
+      "stock": 156,
+      "codigo": "prod-096",
+      "marca": "Waterpik",
+      "categoria": 14
+    },
+    {
+      "id": null,
+      "nombre": "Conair Infiniti Pro",
+      "precio": 39,
+      "stock": 287,
+      "codigo": "prod-097",
+      "marca": "Conair",
+      "categoria": 14
+    },
+    {
+      "id": null,
+      "nombre": "Remington T-Series Trimmer",
+      "precio": 49,
+      "stock": 224,
+      "codigo": "prod-098",
+      "marca": "Remington",
+      "categoria": 14
+    },
+    {
+      "id": null,
+      "nombre": "ghd Platinum+ Styler",
+      "precio": 279,
+      "stock": 86,
+      "codigo": "prod-099",
+      "marca": "ghd",
+      "categoria": 14
+    },
+    {
+      "id": null,
+      "nombre": "BaBylissPRO Nano Titanium",
+      "precio": 129,
+      "stock": 145,
+      "codigo": "prod-100",
+      "marca": "BaBylissPRO",
+      "categoria": 14
+    }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "nombre": "Smartphones",
+    "descripcion": "Teléfonos móviles inteligentes con sistemas operativos como Android o iOS."
+  },
+  {
+    "id": 2,
+    "nombre": "Tablets",
+    "descripcion": "Dispositivos portátiles con pantalla táctil, ideales para navegación y multimedia."
+  },
+  {
+    "id": 3,
+    "nombre": "Laptops",
+    "descripcion": "Computadoras portátiles de alto rendimiento para trabajo, estudio y entretenimiento."
+  },
+  {
+    "id": 4,
+    "nombre": "Auriculares",
+    "descripcion": "Dispositivos de audio personales, con cable o inalámbricos, para escuchar música o llamadas."
+  },
+  {
+    "id": 5,
+    "nombre": "Smartwatches",
+    "descripcion": "Relojes inteligentes que monitorean actividad física y se sincronizan con smartphones."
+  },
+  {
+    "id": 6,
+    "nombre": "Monitores",
+    "descripcion": "Pantallas externas utilizadas para computadoras y consolas de videojuegos."
+  },
+  {
+    "id": 7,
+    "nombre": "Cámaras digitales",
+    "descripcion": "Dispositivos para capturar fotos y videos en alta resolución, incluyendo cámaras mirrorless y DSLR."
+  },
+  {
+    "id": 8,
+    "nombre": "Consolas de videojuegos",
+    "descripcion": "Equipos diseñados para ejecutar videojuegos, como PlayStation, Xbox o Nintendo Switch."
+  },
+  {
+    "id": 9,
+    "nombre": "Accesorios de computadora",
+    "descripcion": "Periféricos como teclados, ratones, bases de refrigeración y hubs USB."
+  },
+  {
+    "id": 10,
+    "nombre": "Dispositivos de red",
+    "descripcion": "Equipos como routers, módems y repetidores que facilitan la conectividad a Internet."
+  },
+  {
+      "id": 11,
+      "nombre": "Electrodomésticos de cocina",
+      "descripcion": "Aparatos eléctricos para preparar y cocinar alimentos como licuadoras, microondas y cafeteras."
+    },
+    {
+      "id": 12,
+      "nombre": "Electrodomésticos de limpieza",
+      "descripcion": "Dispositivos para el cuidado y limpieza del hogar como aspiradoras, lavadoras y lavavajillas."
+    },
+    {
+      "id": 13,
+      "nombre": "Climatización",
+      "descripcion": "Equipos para control de temperatura y calidad del aire como aires acondicionados y ventiladores."
+    },
+    {
+      "id": 14,
+      "nombre": "Cuidado personal",
+      "descripcion": "Aparatos eléctricos para higiene y cuidado personal como secadores, afeitadoras y cepillos eléctricos."
+    },
+]
