@@ -26,6 +26,82 @@ export interface BitacoraFilters {
   fechaFin?: string;
 }
 
+// Datos estáticos de ejemplo
+const BITACORA_ESTATICA: BitacoraEntity[] = [
+  {
+    id: 1,
+    usuario: 1,
+    accion: 'Inicio de sesión exitoso',
+    ipv4: '192.168.1.100',
+    nivel: 'INFO',
+    created_at: new Date(Date.now() - 1000 * 60 * 30).toISOString(),
+    updated_at: new Date(Date.now() - 1000 * 60 * 30).toISOString()
+  },
+  {
+    id: 2,
+    usuario: 2,
+    accion: 'Creación de producto: Laptop Dell XPS 13',
+    ipv4: '192.168.1.105',
+    nivel: 'SUCCESS',
+    created_at: new Date(Date.now() - 1000 * 60 * 60).toISOString(),
+    updated_at: new Date(Date.now() - 1000 * 60 * 60).toISOString()
+  },
+  {
+    id: 3,
+    usuario: 1,
+    accion: 'Intento de acceso no autorizado',
+    ipv4: '192.168.1.200',
+    nivel: 'WARNING',
+    created_at: new Date(Date.now() - 1000 * 60 * 90).toISOString(),
+    updated_at: new Date(Date.now() - 1000 * 60 * 90).toISOString()
+  },
+  {
+    id: 4,
+    usuario: 3,
+    accion: 'Error al procesar pago',
+    ipv4: '192.168.1.150',
+    nivel: 'ERROR',
+    created_at: new Date(Date.now() - 1000 * 60 * 120).toISOString(),
+    updated_at: new Date(Date.now() - 1000 * 60 * 120).toISOString()
+  },
+  {
+    id: 5,
+    usuario: 2,
+    accion: 'Actualización de inventario completada',
+    ipv4: '192.168.1.105',
+    nivel: 'SUCCESS',
+    created_at: new Date(Date.now() - 1000 * 60 * 180).toISOString(),
+    updated_at: new Date(Date.now() - 1000 * 60 * 180).toISOString()
+  },
+  {
+    id: 6,
+    usuario: 1,
+    accion: 'Generación de reporte de ventas',
+    ipv4: '192.168.1.100',
+    nivel: 'INFO',
+    created_at: new Date(Date.now() - 1000 * 60 * 240).toISOString(),
+    updated_at: new Date(Date.now() - 1000 * 60 * 240).toISOString()
+  },
+  {
+    id: 7,
+    usuario: 4,
+    accion: 'Backup de base de datos iniciado',
+    ipv4: '10.0.0.1',
+    nivel: 'INFO',
+    created_at: new Date(Date.now() - 1000 * 60 * 300).toISOString(),
+    updated_at: new Date(Date.now() - 1000 * 60 * 300).toISOString()
+  },
+  {
+    id: 8,
+    usuario: 3,
+    accion: 'Eliminación de producto obsoleto',
+    ipv4: '192.168.1.150',
+    nivel: 'WARNING',
+    created_at: new Date(Date.now() - 1000 * 60 * 360).toISOString(),
+    updated_at: new Date(Date.now() - 1000 * 60 * 360).toISOString()
+  }
+];
+
 export const BitacoraHook = () => {
   const [state, setState] = useState<BitacoraHookProps>({
     items: [],
@@ -34,6 +110,7 @@ export const BitacoraHook = () => {
     filtered: [],
   });
   const uc = new BitacoraUseCase(new APIGateway());
+  
   const loadItems = async () => {
     setState(prev => ({ ...prev, loading: true, message: '' }));
     try {
@@ -41,10 +118,17 @@ export const BitacoraHook = () => {
       if (!response){
         throw Error(`Error obteniendo Bitacora`);
       }
-        const objs = response;
-        setState(prev => ({ ...prev, items: objs, filtered: objs,}));
+      const objs = response;
+      setState(prev => ({ ...prev, items: objs, filtered: objs,}));
     } catch (error) {
-      setState(prev => ({ ...prev, message: `Error obteniendo Bitacora: ${error}` }));
+      console.log('⚠️ Backend no disponible, usando bitácora estática');
+      // Usar datos estáticos como fallback
+      setState(prev => ({ 
+        ...prev, 
+        items: BITACORA_ESTATICA, 
+        filtered: BITACORA_ESTATICA,
+        message: 'Mostrando datos de demostración'
+      }));
     } finally {
       setState(prev => ({ ...prev, loading: false }));
     }

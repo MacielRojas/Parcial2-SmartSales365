@@ -40,3 +40,251 @@
 .read-the-docs {
   color: #888;
 }
+/* Estilos para el sistema de reportes con voz */
+.ejemplo-badge {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.ejemplo-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+/* Animación del botón de grabación */
+@keyframes pulse-recording {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+.btn-danger {
+  animation: pulse-recording 1.5s infinite;
+}
+
+/* Estilos para el área de texto con voz */
+textarea:focus {
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+}
+
+/* Estilos mejorados para alertas de IA */
+.alert-success {
+  border-left: 4px solid #28a745;
+  animation: slideInLeft 0.3s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estilos para badges de nuevo */
+.badge.bg-success {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Estilos para botones de exportación */
+.btn-group .btn {
+  transition: all 0.2s ease;
+}
+
+.btn-group .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Spinner de carga mejorado */
+.spinner-border {
+  border-width: 0.2em;
+}
+
+/* Estilos para el feedback visual de reconocimiento de voz */
+.speech-feedback {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   ESTILOS PARA DASHBOARD DE ESTADÍSTICAS
+   ============================================ */
+
+/* Tarjetas de estadísticas mejoradas */
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.075) !important;
+  transition: all 0.3s ease;
+}
+
+.shadow-sm:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-3px);
+}
+
+/* Iconos en tarjetas de estadísticas */
+.bg-opacity-10 {
+  background-opacity: 0.1 !important;
+}
+
+/* Gradientes para header de análisis IA */
+.bg-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Animación de aparición para tarjetas */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: slideInUp 0.4s ease;
+}
+
+/* Badges con tendencias */
+.badge {
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+  font-size: 0.85em;
+}
+
+/* Listas de análisis IA */
+.list-unstyled li {
+  transition: all 0.2s ease;
+}
+
+.list-unstyled li:hover {
+  transform: translateX(5px);
+  background-color: rgba(0, 0, 0, 0.02);
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+/* Alertas de IA con gradiente */
+.alert-warning {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border-left: 4px solid #ffc107;
+}
+
+/* Iconos en secciones de análisis */
+.text-primary i, .text-success i, .text-warning i, .text-info i {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Spinner de carga para análisis */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.15em;
+}
+
+/* Tarjetas de categorías mejoradas */
+.border-bottom:last-child {
+  border-bottom: none !important;
+}
+
+/* Hover effects para categorías */
+.border-bottom:hover {
+  background-color: rgba(13, 110, 253, 0.05);
+  border-radius: 8px;
+  padding: 0.5rem !important;
+  transition: all 0.2s ease;
+}
+
+/* Badges de métricas más grandes */
+.fs-6 {
+  font-size: 1rem !important;
+}
+
+/* Estado vacío mejorado */
+.text-center.text-muted i {
+  opacity: 0.5;
+}
+
+/* Botón de actualizar con efecto hover */
+.btn-primary:hover i {
+  animation: rotate 0.5s ease;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .shadow-sm:hover {
+    transform: none;
+  }
+  
+  .list-unstyled li:hover {
+    transform: none;
+  }
+}
+
+/* Animación de entrada para insights */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.list-unstyled li {
+  animation: fadeInLeft 0.3s ease;
+  animation-fill-mode: both;
+}
+
+.list-unstyled li:nth-child(1) { animation-delay: 0.1s; }
+.list-unstyled li:nth-child(2) { animation-delay: 0.2s; }
+.list-unstyled li:nth-child(3) { animation-delay: 0.3s; }
+.list-unstyled li:nth-child(4) { animation-delay: 0.4s; }
+.list-unstyled li:nth-child(5) { animation-delay: 0.5s; }

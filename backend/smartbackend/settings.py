@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import os
+import dj_database_url
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,7 +51,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_api',
-    'app_content',
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
@@ -86,13 +90,26 @@ SIMPLE_JWT = {
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
 }
 
-CORS_ALLOWED_ORIGINS = [
-    config('CORS_ALLOWED_ORIGINS', cast=str, default='http://192.168.0.14:5173'),
+# Allow list for CORS. Accepts multiple origins from env var separated
+# by comma/space/semicolon and adds some common localhost entries.
+_env_cors = config('CORS_ALLOWED_ORIGINS', cast=str, default='')
+CORS_ALLOWED_ORIGINS = []
+if _env_cors:
+    # support comma, semicolon or space separated lists in env
+    for part in _env_cors.replace(';', ',').split(','):
+        for sub in part.split():
+            origin = sub.strip()
+            if origin:
+                CORS_ALLOWED_ORIGINS.append(origin)
+
+# common development origins
+for origin in [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "http://192.168.0.*:5173",
-    "http://192.168.1.*:5173",
-]
+    "http://localhost:3000",
+]:
+    if origin not in CORS_ALLOWED_ORIGINS:
+        CORS_ALLOWED_ORIGINS.append(origin)
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -143,19 +160,11 @@ WSGI_APPLICATION = 'smartbackend.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-
-    'default' : {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
-    }
+    'default': dj_database_url.config(
+        # Lee directamente la variable DATABASE_URL del entorno (cargada desde .env)
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600
+    )
 }
 
 

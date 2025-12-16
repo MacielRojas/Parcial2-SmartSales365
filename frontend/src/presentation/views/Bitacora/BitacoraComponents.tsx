@@ -1,5 +1,37 @@
 import React from 'react';
 import type { BitacoraEntity } from '../../../domain/entities/Bitacora_entity';
+import { Badge } from 'react-bootstrap';
+
+// Función auxiliar para las clases de los badges
+const getTipoBadgeClass = (tipo: string): string => {
+  switch (tipo) {
+    case 'INFO':
+      return 'bg-info';
+    case 'WARNING':
+      return 'bg-warning text-dark';
+    case 'ERROR':
+      return 'bg-danger';
+    case 'SUCCESS':
+      return 'bg-success';
+    default:
+      return 'bg-secondary';
+  }
+};
+
+const getNivelIcon = (nivel: string): string => {
+  switch (nivel) {
+    case 'INFO':
+      return 'ℹ️';
+    case 'SUCCESS':
+      return '✅';
+    case 'WARNING':
+      return '⚠️';
+    case 'ERROR':
+      return '❌';
+    default:
+      return '📝';
+  }
+};
 
 interface BitacoraTableProps {
   entries: BitacoraEntity[];
@@ -10,80 +42,89 @@ export const BitacoraTable2: React.FC<BitacoraTableProps> = ({
   entries,
   isLoading
 }) => {
+  // Debug: mostrar en consola los datos recibidos
+  React.useEffect(() => {
+    console.log('📋 BitacoraTable - Entries recibidas:', entries);
+    console.log('📋 BitacoraTable - Cantidad:', entries.length);
+    console.log('📋 BitacoraTable - Loading:', isLoading);
+  }, [entries, isLoading]);
+
   if (isLoading) {
     return (
-      <div className="text-center py-4">
-        <div className="spinner-border" role="status">
+      <div className="text-center py-5">
+        <div className="spinner-border text-primary" role="status">
           <span className="visually-hidden">Cargando...</span>
         </div>
+        <p className="text-muted mt-2">Cargando registros...</p>
       </div>
     );
   }
 
-  if (entries.length === 0) {
+  if (!entries || entries.length === 0) {
     return (
-      <div className="text-center py-4">
+      <div className="text-center py-5">
+        <i className="fas fa-inbox fa-3x text-muted mb-3"></i>
         <p className="text-muted">No hay registros en la bitácora</p>
+        <small className="text-muted">Total de entradas: {entries?.length || 0}</small>
       </div>
     );
   }
 
   return (
     <div className="table-responsive">
-      <table className="table table-striped table-hover">
-        <thead className="table-dark">
+      <table className="table table-hover mb-0">
+        <thead className="table-light">
           <tr>
-            <th scope="col">Fecha-Hora</th>
-            <th scope="col">IP</th>
-            <th scope="col">Usuario</th>
-            <th scope="col">Tipo</th>
-            <th scope="col" className="text-center">Acciones</th>
+            <th scope="col">
+              <i className="fas fa-clock me-2"></i>Fecha-Hora
+            </th>
+            <th scope="col">
+              <i className="fas fa-network-wired me-2"></i>IP
+            </th>
+            <th scope="col">
+              <i className="fas fa-user me-2"></i>Usuario
+            </th>
+            <th scope="col">
+              <i className="fas fa-bolt me-2"></i>Acción
+            </th>
+            <th scope="col" className="text-center">
+              <i className="fas fa-tag me-2"></i>Tipo
+            </th>
           </tr>
         </thead>
         <tbody>
           {entries.map((entry) => (
             <tr key={entry.id}>
               <td>
-                {/* <small>
-                  {new Date(entry.fecha).toLocaleDateString()}
-                  <br />
-                  <span className="text-muted">
-                    {new Date(entry.fecha).toLocaleTimeString()}
-                  </span>
-                </small> */}
+                <small>
+                  {entry.created_at ? (
+                    <>
+                      {new Date(entry.created_at).toLocaleDateString('es-ES')}
+                      <br />
+                      <span className="text-muted">
+                        {new Date(entry.created_at).toLocaleTimeString('es-ES')}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-muted">-</span>
+                  )}
+                </small>
               </td>
               <td>
-                <strong>{entry.ipv4}</strong>
+                <code className="text-primary">{entry.ipv4}</code>
               </td>
               <td>
-                <div className="text-truncate" style={{ maxWidth: '200px' }}>
-                  {entry.usuario}
+                <Badge bg="secondary">Usuario #{entry.usuario}</Badge>
+              </td>
+              <td>
+                <div className="text-truncate" style={{ maxWidth: '300px' }} title={entry.accion}>
+                  {entry.accion}
                 </div>
-              </td>
-              <td>
-                <span className={`badge ${getTipoBadgeClass(entry.nivel)}`}>
-                  {entry.nivel}
-                </span>
               </td>
               <td className="text-center">
-                <div className="btn-group btn-group-sm" role="group">
-                  {/* <button
-                    type="button"
-                    className="btn btn-outline-primary"
-                    // onClick={() => onEdit(entry)}
-                    title="Editar"
-                  > */}
-                    {/* <i className="bi bi-pencil"></i>
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-outline-danger"
-                    onClick={() => onDelete(entry.id)}
-                    title="Eliminar"
-                  >
-                    <i className="bi bi-trash"></i>
-                  </button> */}
-                </div>
+                <span className={`badge ${getTipoBadgeClass(entry.nivel)}`}>
+                  {getNivelIcon(entry.nivel)} {entry.nivel}
+                </span>
               </td>
             </tr>
           ))}
@@ -269,20 +310,4 @@ export const BitacoraFilters: React.FC<{
       </div>
     </div>
   );
-};
-
-// Función auxiliar para las clases de los badges
-const getTipoBadgeClass = (tipo: string): string => {
-  switch (tipo) {
-    case 'INFO':
-      return 'bg-info';
-    case 'WARNING':
-      return 'bg-warning text-dark';
-    case 'ERROR':
-      return 'bg-danger';
-    case 'SUCCESS':
-      return 'bg-success';
-    default:
-      return 'bg-secondary';
-  }
 };

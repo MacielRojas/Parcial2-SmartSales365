@@ -1,36 +1,54 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Card, Form, Button, Alert, Badge } from 'react-bootstrap';
+import { Card, Form, Button, Alert, Badge, Spinner } from 'react-bootstrap';
+import { procesarConsultaConIA, generarSugerenciasReportes, type ReportStructure } from '../../../services/reporteOpenAIService';
 
 interface ReporteLenguajeNaturalProps {
-  onGenerate: (query: string) => Promise<void>;
+  onGenerate: (query: string, estructura?: ReportStructure) => Promise<void>;
   loading: boolean;
 }
 
 const ReporteLenguajeNatural: React.FC<ReporteLenguajeNaturalProps> = ({ 
   onGenerate, 
-  loading 
+  loading,
+  // onExportPDF
 }) => {
   const [query, setQuery] = useState('');
   const [interimTranscript, setInterimTranscript] = useState('');
   const [error, setError] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const [isSpeechSupported, setIsSpeechSupported] = useState(false);
-  const recognitionRef = useRef<any>(null);
-
-  const ejemplos = [
+  const [processingWithAI, setProcessingWithAI] = useState(false);
+  const [aiSuggestion, setAiSuggestion] = useState<string>('');
+  const [ejemplos, setEjemplos] = useState<string[]>([
+    "Reporte de los productos destacados",
     "Mostrar las ventas del último mes agrupadas por categoría",
     "Top 10 productos más vendidos en el último trimestre",
+    "Productos con stock disponible",
     "Usuarios registrados por mes del año actual",
     "Ventas totales por día de la semana",
     "Productos con stock bajo (menos de 10 unidades)",
     "Comparativa de ventas entre este mes y el mes anterior",
     "Clientes con más compras en los últimos 6 meses",
-    "Productos que nunca se han vendido",
-    "Tendencia de ventas por hora del día",
     "Categorías con mejor margen de ganancia"
-  ];
+  ]);
+  const recognitionRef = useRef<any>(null);
 
   useEffect(() => {
+    // Cargar sugerencias de reportes con IA al montar el componente
+    const cargarSugerencias = async () => {
+      try {
+        const sugerencias = await generarSugerenciasReportes();
+        if (sugerencias.length > 0) {
+          setEjemplos(sugerencias);
+        }
+      } catch (error) {
+        console.error('Error al cargar sugerencias:', error);
+        // Mantener ejemplos por defecto
+      }
+    };
+
+    cargarSugerencias();
+
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     
     if (!SpeechRecognition) {
@@ -122,6 +140,7 @@ const ReporteLenguajeNatural: React.FC<ReporteLenguajeNaturalProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setAiSuggestion('');
 
     if (!query.trim()) {
       setError('Por favor, ingresa una consulta en lenguaje natural');
@@ -134,9 +153,46 @@ const ReporteLenguajeNatural: React.FC<ReporteLenguajeNaturalProps> = ({
     }
 
     try {
-      await onGenerate(query.trim());
+      setProcessingWithAI(true);
+      
+      // Verificar si está configurado OpenAI
+      const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+      if (!apiKey) {
+        setError('⚠️ API Key de OpenAI no configurada. Por favor, configura VITE_OPENAI_API_KEY en el archivo .env');
+        setProcessingWithAI(false);
+        return;
+      }
+
+      console.log('Procesando consulta con OpenAI:', query.trim());
+      
+      // Procesar con OpenAI para entender mejor la consulta
+      const estructura = await procesarConsultaConIA({ consulta: query.trim() });
+      
+      console.log('Estructura generada por OpenAI:', estructura);
+      
+      // Mostrar una sugerencia amigable al usuario
+      setAiSuggestion(`🤖 AI interpretó: "${estructura.descripcion}"`);
+      
+      setProcessingWithAI(false);
+      
+      // Llamar al generador de reportes con la estructura procesada
+      await onGenerate(query.trim(), estructura);
+      
     } catch (err) {
-      setError('Error al generar el reporte. Intenta con otra consulta.');
+      console.error('Error completo:', err);
+      const errorMsg = err instanceof Error ? err.message : 'Error desconocido';
+      
+      if (errorMsg.includes('VITE_OPENAI_API_KEY') || errorMsg.includes('OpenAI')) {
+        setError('⚠️ API Key de OpenAI no configurada. Verifica tu archivo .env');
+      } else if (errorMsg.includes('fetch')) {
+        setError('❌ Error de conexión. Verifica que el backend esté corriendo.');
+      } else if (errorMsg.includes('JSON')) {
+        setError('❌ Error al procesar la respuesta de OpenAI. Intenta reformular tu consulta.');
+      } else {
+        setError(`❌ Error: ${errorMsg}`);
+      }
+    } finally {
+      setProcessingWithAI(false);
     }
   };
 
@@ -167,6 +223,13 @@ const ReporteLenguajeNatural: React.FC<ReporteLenguajeNaturalProps> = ({
       </Card.Header>
       
       <Card.Body>
+        {aiSuggestion && (
+          <Alert variant="success" className="py-2 d-flex align-items-center">
+            <i className="bi bi-stars me-2"></i>
+            <small>{aiSuggestion}</small>
+          </Alert>
+        )}
+
         {error && (
           <Alert variant="danger" className="py-2">
             <small>{error}</small>
@@ -242,13 +305,13 @@ const ReporteLenguajeNatural: React.FC<ReporteLenguajeNaturalProps> = ({
               <Button
                 variant="primary"
                 type="submit"
-                disabled={loading || !query.trim()}
+                disabled={loading || processingWithAI || !query.trim()}
                 className="fw-semibold"
               >
-                {loading ? (
+                {(loading || processingWithAI) ? (
                   <>
-                    <span className="spinner-border spinner-border-sm me-2" />
-                    Procesando consulta...
+                    <Spinner animation="border" size="sm" className="me-2" />
+                    {processingWithAI ? 'Analizando con IA...' : 'Generando reporte...'}
                   </>
                 ) : (
                   <>
@@ -288,9 +351,9 @@ const ReporteLenguajeNatural: React.FC<ReporteLenguajeNaturalProps> = ({
 
         <div className="mt-3 p-3 bg-light rounded">
           <small className="text-muted">
-            <strong>Tip:</strong> Nuestro sistema AI entiende consultas complejas como 
+            <strong><i className="bi bi-stars me-1"></i>Potenciado por OpenAI:</strong> Nuestro sistema entiende consultas complejas como 
             "ventas por categoría último mes", "productos más rentables", 
-            "comparativa mensual de ingresos", etc.
+            "comparativa mensual de ingresos", etc. Puedes usar voz o texto para crear tus reportes.
           </small>
         </div>
       </Card.Body>
