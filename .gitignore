@@ -51,7 +51,6 @@ media/
 staticfiles/
 static_root/
 static/
-public/
 logs/
 *.mo
 
