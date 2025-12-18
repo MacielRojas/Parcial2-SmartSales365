@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool, default=True)
+DEBUG = config('DEBUG', cast=bool, default=False)
 
 # Allowed host sirve para permitir el acceso a la app desde cualquier dominio
 ALLOWED_HOSTS = [
@@ -37,8 +37,17 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '192.168.0.14',
     '192.168.1.*',
-    config('ALLOWED_HOSTS'),
 ]
+
+# Railway hosts
+railway_host = config('RAILWAY_PUBLIC_DOMAIN', default='')
+if railway_host:
+    ALLOWED_HOSTS.append(railway_host)
+
+# Agregar hosts adicionales desde variable de entorno
+additional_hosts = config('ALLOWED_HOSTS', default='')
+if additional_hosts:
+    ALLOWED_HOSTS.extend([host.strip() for host in additional_hosts.split(',')])
 
 
 # Application definition
@@ -128,6 +137,7 @@ CORS_ALLOW_HEADERS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Para servir archivos estáticos en producción
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -205,7 +215,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Configuración de WhiteNoise para servir archivos estáticos
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 # stripe config
 STRIPE_SECRET_KEY = config("STRIPE_SECRET_KEY")
