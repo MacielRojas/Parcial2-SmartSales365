@@ -10,7 +10,7 @@ certifi==2025.10.5
 charset-normalizer==3.4.4
 cloudinary==1.44.1
 colorama==0.4.6
-crudcleanarch @ git+https://github.com/ZequerVirus/CleanCrud.git@e15a3e887b715c0f414d0be052e3ad26c4a34c2b
+# crudcleanarch @ git+https://github.com/ZequerVirus/CleanCrud.git@e15a3e887b715c0f414d0be052e3ad26c4a34c2b
 dateparser==1.2.2
 decorator==5.2.1
 distro==1.9.0
