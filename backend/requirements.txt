@@ -14,10 +14,13 @@ crudcleanarch @ git+https://github.com/ZequerVirus/CleanCrud.git@e15a3e887b715c0
 dateparser==1.2.2
 decorator==5.2.1
 distro==1.9.0
+dj-database-url==2.2.0
 Django==5.2.7
 django-cloudinary-storage==0.3.0
 django-cors-headers==4.9.0
 django-decouple==2.1
+python-decouple==3.8
+python-dotenv==1.0.1
 djangorestframework==3.16.1
 djangorestframework_simplejwt==5.5.1
 et_xmlfile==2.0.0

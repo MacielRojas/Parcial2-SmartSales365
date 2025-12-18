@@ -116,6 +116,7 @@ for origin in [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:3000",
+    "https://droksales.netlify.app",  # Frontend en producción
 ]:
     if origin not in CORS_ALLOWED_ORIGINS:
         CORS_ALLOWED_ORIGINS.append(origin)
